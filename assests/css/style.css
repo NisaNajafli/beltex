@@ -5074,157 +5074,130 @@ b {
   }
 }
 
-/* OVERLAY */
+
+
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(10, 15, 30, 0.65);
-  backdrop-filter: blur(12px);
-
+  background: rgba(0,0,0,0.65);
   opacity: 0;
   visibility: hidden;
-  transition: 0.35s ease;
-
-  z-index: 200;
+  transition: 0.3s;
+  z-index: 999999;
 }
 
-/* MODAL */
-.modal-box {
+.custom-modal {
   position: fixed;
   top: 50%;
   left: 50%;
-
-  width: 420px;
-  max-width: 90%;
-
-  transform: translate(-50%, -60%) scale(0.95);
+  transform: translate(-50%, -50%) scale(0.96);
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  padding: 40px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 0;
   opacity: 0;
-
-  background: linear-gradient(180deg, #ffffff, #f7f9fc);
-  border-radius: 20px;
-  padding: 35px;
-
-  box-shadow: 0 30px 80px rgba(0,0,0,0.25);
-  border: 1px solid #eef1f5;
-
-  transition: 0.4s cubic-bezier(.77,0,.18,1);
-
-  z-index: 201;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 999999;
 }
 
-/* ACTIVE */
-.modal-box.active {
-  transform: translate(-50%, -50%) scale(1);
+.custom-modal.is-active {
   opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
 }
 
-.modal-overlay.active {
+.modal-overlay.is-active {
   opacity: 1;
   visibility: visible;
 }
 
-/* CLOSE */
-.modal-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  padding: 0;
-  width: 36px;
-  height: 36px;
-
-  border-radius: 50%;
-  border: none;
-
-  background: #fff;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: 0.25s;
+/* Text */
+.modal-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #000;
 }
 
-.modal-close:hover {
-  background: #fff;
-  transform: rotate(90deg);
-  border: none
+.modal-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--blue-dark);
+  margin-bottom: 28px;
 }
 
-.modal-close svg {
-  width: 18px;
-  height: 18px;
-}
-
-/* CONTENT */
-.modal-content h2 {
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-
-.modal-content p {
-  color: #6b7a8d;
-  margin-bottom: 25px;
-}
-
-/* FORM */
+/* Form */
 .modal-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
 }
 
-/* INPUT */
-.field input {
+.form-group label {
+  font-size: 13px;
+  color:#000;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
   width: 100%;
-  height: 52px;
-
-  border-radius: 14px;
-  border: 1px solid #e5e9f2;
-
-  padding: 0 15px;
-  font-size: 15px;
-
-  background: #f8fafc;
-  transition: 0.25s;
-}
-
-/* FOCUS */
-.field input:focus {
-  border-color: #04387f;
+  padding: 12px 14px;
+  border: 1px solid rgba(0,0,0,0.2);
   background: #fff;
+  font-size: 14px;
+  color: #000;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(4, 56, 127, 0.08);
-}
-
-/* BUTTON */
-.modal-submit {
-  height: 52px;
-  border-radius: 14px;
-  border: none;
-
-  background: linear-gradient(135deg, #04387f, #1a5fff);
-  color: #fff;
-
-  font-weight: 600;
-  cursor: pointer;
-
   transition: 0.3s;
 }
 
-.modal-submit:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(4, 56, 127, 0.35);
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--blue-dark);
 }
 
-/* OPEN BTN */
-.open-modal-btn {
-  padding: 12px 24px;
-  border-radius: 30px;
-  border: none;
+textarea {
+  resize: none;
+}
 
-  background: #04387f;
+/* Action */
+.modal-action {
+  margin-top: 10px;
+  padding: 14px;
+  background:  var(--blue-dark);
+  border: 1px solid  var(--blue-dark);
   color: #fff;
-
   cursor: pointer;
+  transition: 0.3s;
+  overflow: hidden;
+}
+.modal-action:hover {
+  background-color: #fff;
+  border-color:  var(--blue-dark);
+  color:  var(--blue-dark);
+}
+
+
+
+/* Close */
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+
+.modal-close:hover {
+  color:  var(--blue-dark);
+  border: none;
+  background: transparent
 }

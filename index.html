@@ -18,40 +18,38 @@
     <title>БЕЛТЕХ</title>
   </head>
   <body>
-    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-overlay" data-modal-overlay></div>
 
-    <!-- MODAL -->
-    <div class="modal-box" id="modalBox">
-      <!-- CLOSE -->
-      <button class="modal-close" id="modalClose">
-        <svg
-          viewBox="0 0 24 24"
-          stroke="#000"
-          stroke-width="2"
-          fill="#000"
-        >
-          <path d="M6 6l12 12M6 18L18 6" />
-        </svg>
-      </button>
+    <div class="custom-modal" data-modal>
+      <button class="modal-close" data-modal-close>&times;</button>
 
-      <!-- CONTENT -->
-      <div class="modal-content">
-        <h2>Связаться с нами</h2>
-        <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+      <h2 class="modal-title">Оставить заявку</h2>
+      <p class="modal-text">
+        Заполните форму, и наш специалист свяжется с вами в ближайшее время.
+      </p>
 
-        <form class="modal-form">
-          <div class="field">
-            <input type="text" placeholder="Ваше имя" />
-          </div>
+      <form class="modal-form">
+        <div class="form-group">
+          <label>Имя</label>
+          <input type="text" placeholder="Ваше имя" required />
+        </div>
 
-          <div class="field">
-            <input type="tel" placeholder="Телефон" />
-          </div>
+        <div class="form-group">
+          <label>Tелефон</label>
+          <input type="tel" placeholder="Ваше телефона" required />
+        </div>
 
-          <button class="modal-submit">Отправить заявку</button>
-        </form>
-      </div>
+        <div class="form-group">
+          <label>Сообщение</label>
+          <textarea placeholder="Введите сообщение" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="modal-action">
+          <span>Отправить</span>
+        </button>
+      </form>
     </div>
+      
     <div class="nav-backdrop" id="navBackdrop"></div>
 
     <aside class="nav-drawer" id="navDrawer">
@@ -2393,7 +2391,7 @@
                     подробно проконсультируем вас.
                   </p>
                 </div>
-                <a class="btn-premium open-modal-btn" >
+                <a class="btn-premium" data-modal-open>
                   <span>Оставить заявку</span>
                   <i class="btn-icon"> → </i>
                 </a>
