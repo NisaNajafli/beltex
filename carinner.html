@@ -21,6 +21,49 @@
     <title>БЕЛТЕХ</title>
   </head>
   <body>
+    <div class="nav-backdrop" id="navBackdrop"></div>
+
+    <aside class="nav-drawer" id="navDrawer">
+      <!-- TOP -->
+      <div class="nav-top">
+        <span>Меню</span>
+
+        <button class="nav-close" id="navClose">
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            stroke="currentColor"
+            stroke-width="2"
+            fill="none"
+          >
+            <path d="M6 6l12 12M6 18L18 6" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- NAV -->
+      <ul class="nav-list">
+        <li><a href="/services.html">Услуги</a></li>
+        <li><a href="/about.html">О компании</a></li>
+        <li><a href="/blogs.html">Стати</a></li>
+        <li><a href="/catalog.html">Каталог</a></li>
+        <li><a href="/team.html">Команда</a></li>
+        <li><a href="/howwork.html">Как мы работаем</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/contact.html">Контакты</a></li>
+      </ul>
+      
+      <a href="/">
+        <img src="/assests/img/indigologo.png" alt="">
+      </a>
+      <!-- SOCIAL -->
+      <div class="nav-social">
+        <a href="#"><img src="/assests/img/telegram.svg" /></a>
+        <a href="#"><img src="/assests/img/whatsapp.svg" /></a>
+        <a href="#"><img src="/assests/img/maxmessencer.png" /></a>
+      </div>
+    </aside>
     <div class="sticky_icon_wrapper">
       <div id="main-div">
         <div id="main-button" class="wave">
@@ -157,41 +200,40 @@
     <header>
       <div class="container">
         <div class="logo">
-          <div class="burger">
+          <div class="nav-trigger desktop" id="navTrigger">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              version="1.1"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 24 24"
               width="22"
               height="14"
-              x="0"
-              y="0"
-              viewBox="0 0 24 24"
-              style="enable-background: new 0 0 512 512"
-              xml:space="preserve"
-              class=""
+              stroke="#fff"
+              stroke-width="2"
+              fill="none"
             >
-              <g>
-                <path
-                  d="M3.5 7.5h17a1.5 1.5 0 1 0 0-3h-17a1.5 1.5 0 1 0 0 3zM20.5 10.5h-17a1.5 1.5 0 1 0 0 3h17a1.5 1.5 0 1 0 0-3zM20.5 16.5h-17a1.5 1.5 0 1 0 0 3h17a1.5 1.5 0 1 0 0-3z"
-                  fill="#ffffff"
-                  opacity="1"
-                  data-original="#000000"
-                  class=""
-                ></path>
-              </g>
+              <path d="M3 6h18M3 12h18M3 18h18" />
             </svg>
           </div>
           <a href="/">
             <img src="/assests/img/indigologo.png" alt="" />
           </a>
         </div>
-        <div>
+        <div class="nav-trigger mobile" id="navTrigger2">
+          <svg
+            viewBox="0 0 24 24"
+            width="35"
+            height="35"
+            stroke="#000"
+            stroke-width="2"
+            fill="none"
+          >
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+        </div>
+        <div class="headernav">
           <nav>
             <ul>
               <li><a href="/services.html">Услуги</a></li>
               <li><a href="/about.html">О компании</a></li>
-              <li><a href="/blogs.html">Стати</a></li>
+              <li class="none"><a href="/blogs.html">Стати</a></li>
               <li><a href="/catalog.html">Каталог</a></li>
               <li><a href="/team.html">Команда</a></li>
               <li><a href="/faq.html">FAQ</a></li>
