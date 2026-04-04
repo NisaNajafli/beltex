@@ -373,7 +373,7 @@ body {
 .nav-drawer > a img {
   width: 220px;
   object-fit: cover;
-  margin-top: 240px;
+  margin-top: 50px;
 }
 .nav-social img {
   width: 38px;
@@ -1295,6 +1295,7 @@ section {
   display: flex;
   gap: 13px 24px;
   align-items: center;
+  overflow: hidden;
 }
 .brands-footer a {
   color: #fff;
